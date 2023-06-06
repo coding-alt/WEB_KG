@@ -7,7 +7,7 @@ import glob
 import re
 import pymongo
 from scrapy.selector import Selector
-from neo4j.v1 import GraphDatabase
+from neo4j import GraphDatabase
 import logging
 import time
 logfile_name = time.ctime(time.time()).replace(' ', '_')
@@ -28,7 +28,7 @@ class BaikeSpider(scrapy.Spider):
     if len(olds) > 0:
         start_urls = ['https://baike.baidu.com/item/'+olds.pop()]
     driver = GraphDatabase.driver(
-        "bolt://localhost:7687", auth=("neo4j", "123"))
+        "bolt://localhost:7687", auth=("neo4j", "MhxzKhlneo4j"))
 
     def add_node(self, tx, name1, relation, name2):
         tx.run("MERGE (a:Node {name: $name1}) "

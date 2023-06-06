@@ -28,6 +28,7 @@ LOG_LEVEL = 'WARNING'
 DOWNLOAD_TIMEOUT = 15
 REACTOR_THREADPOOL_MAXSIZE = 20
 
+REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs

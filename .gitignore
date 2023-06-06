@@ -1,5 +1,3 @@
 __pycache__/
 webpages/*
-*.html
-*.txt
 *.log
